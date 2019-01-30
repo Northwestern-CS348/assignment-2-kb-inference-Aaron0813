@@ -79,7 +79,7 @@ class KBTest(unittest.TestCase):
         self.assertEqual(str(answer[0]), "?X : C")
         # self.assertEqual(str(answer[1]), "?X : chen")
 
-        r1 = read.parse_input("fact: (parent B C)")
+        r1 = read.parse_input("fact: (parent A D)")
         print(' Retracting', r1)
         self.KB.kb_retract(r1)
 
@@ -87,7 +87,7 @@ class KBTest(unittest.TestCase):
         answer = self.KB.kb_ask(ask1)
         self.assertEqual(str(answer[0]), "?X : C")
 
-        r1 = read.parse_input("fact: (parent A D)")
+        r1 = read.parse_input("fact: (parent B C)")
         print(' Retracting', r1)
         self.KB.kb_retract(r1)
 
