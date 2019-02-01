@@ -148,7 +148,6 @@ class KnowledgeBase(object):
             if fact_or_rule not in self.facts:
                 print("Not existed")
                 return
-            print(fact_or_rule.statement)
             current = self.facts[self.facts.index(fact_or_rule)]
             if current.asserted and current.supported_by:
                 print("Asserted and supported_by not empty cannot be retracted")
@@ -163,7 +162,6 @@ class KnowledgeBase(object):
             if fact_or_rule not in self.rules:
                 print("Not existed")
                 return
-            print(fact_or_rule.rhs)
             current = self.rules[self.rules.index(fact_or_rule)]
             if (len(current.supported_by) < 2) and (not current.asserted):
                 self.rules.remove(current)
